@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Move It | Move With Joy</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+    <script defer src="script.js"></script>
+
+    <style>
+      .feature-icon {
+        width: 4rem;
+        height: 4rem;
+        border-radius: .75rem;
+      }
+
+      span {
+        color: red;
+        font-weight: bold;
+        padding-left: 2px;
+      }
+
+      .bg-light {
+        background-color: #f8f9fa !important;
+      }
+
+      .form-check-label {
+        font-weight: 500;
+      }
+
+      .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode p, .dark-mode label, .dark-mode .text-body-secondary {
+          color: #ffffff !important; /* Ensures readability */
+      }
+
+      .dark-mode .bg-light {
+          background-color: #333 !important; /* Adjusts light backgrounds */
+      }
+
+      .dark-mode .alert-success {
+          background-color: #155724 !important;
+          color: #d4edda !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="images/box-seam.svg" alt="box icon" height="30"> Move It</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#contact">Contact Us</a>
+            </li>
+            <li class="nav-item">
+            </li>
+            <li><button id="themeToggle" class="btn btn-outline-secondary w-100">🌙 Dark Mode</button></li>
+          </ul>
+          
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder=" Enter Your Zipcode" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Check</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="px-4 pt-5 my-5 text-center border-bottom">
+      <h1 class="display-4 fw-bold text-body-emphasis">Move With Joy</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">Welcome to our website, where we are on a mission to provide exceptional moving services to customers in the US. As a startup, we believe that moving doesn't have to be stressful or complicated, and we are passionate about making the process as seamless and enjoyable as possible.</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+          <a href="#quote"><button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Get a Quote</button></a>
+          <a href="#contact"><button type="button" class="btn btn-outline-secondary btn-lg px-4">Contact Us</button></a>
+        </div>
+      </div>
+      <div class="overflow-hidden" style="max-height: 30vh;">
+        <div class="container px-5">
+          <img src="images/moving-van.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <!-- About Us -->
+    <div class="container px-4 py-5" id="about">
+      <h2 class="pb-2 border-bottom">Why Move With Us?</h2>
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="feature col">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+            <img src="images/briefcase.svg" alt="briefcase icon" height="30px">
+          </div>
+          <h3 class="fs-2 text-body-emphasis">Professional</h3>
+          <p>Our team of professional movers are trained to prioritize efficiency, organization, and attention to detail. We understand that your possessions are more than just objects - they are a reflection of your life, memories, and experiences. That's why we take extra care to ensure that everything is packed and transported with the utmost care and attention.</p>
+          <a href="#" class="icon-link">
+            Get a Quote
+            <img src="images/chevron-right.svg" alt="right arrow">
+          </a>
+        </div>
+        <div class="feature col">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+            <img src="images/bus-front.svg" alt="bus icon" height="30px">
+          </div>
+          <h3 class="fs-2 text-body-emphasis">Nationwide</h3>
+          <p>We offer a range of services to suit your individual needs, whether you're moving locally or across the country. Our team can handle everything from packing and loading to unloading and unpacking, so you can focus on settling into your new home. And with our transparent pricing and no hidden fees, you can trust that you're getting a fair and competitive rate for our services.</p>
+          <a href="#" class="icon-link">
+            Get a Quote
+            <img src="images/chevron-right.svg" alt="right arrow">
+          </a>
+        </div>
+        <div class="feature col">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+            <img src="images/chat-square-heart.svg" alt="chat heart icon" height="30px">
+          </div>
+          <h3 class="fs-2 text-body-emphasis">Personal Touch</h3>
+          <p>At our core, we believe that moving should be an exciting and positive experience, not a stressful one. By providing exceptional moving services in the US, we hope to revolutionize the way people think about moving and provide a better, more personalized experience for our customers. Contact us today to learn more about how we can help you with your next move.</p>
+          <a href="#" class="icon-link">
+            Get a Quote
+            <img src="images/chevron-right.svg" alt="right arrow">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel -->
+    <div class="container">
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/couple.jpg" class="d-block w-100" alt="couple in new home">
+          </div>
+          <div class="carousel-item">
+            <img src="images/dog.jpg" class="d-block w-100" alt="dog in a moving box">
+          </div>
+          <div class="carousel-item">
+            <img src="images/family.jpg" class="d-block w-100" alt="family decorating new home">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Cost Calculator -->
+    <div class="container py-5" id="quote">
+      <h2 class="pb-2 border-bottom">Moving Cost Estimator</h2>
+
+      <!-- Bedrooms Selection -->
+      <div class="mb-3">
+          <label for="bedroomSelect" class="form-label"><strong>Number of Bedrooms:</strong></label>
+          <select class="form-select" id="bedroomSelect">
+              <option value="0">Studio - $500</option>
+              <option value="1">1 Bedroom - $800</option>
+              <option value="2">2 Bedrooms - $1200</option>
+              <option value="3">3 Bedrooms - $1800</option>
+              <option value="4">4+ Bedrooms - $2500</option>
+          </select>
+      </div>
+
+      <!-- Add-On Services -->
+      <div class="mb-3">
+          <label class="form-label"><strong>Additional Services:</strong></label>
+          <div class="form-check">
+              <input class="form-check-input add-on" type="checkbox" value="200" id="packingService">
+              <label class="form-check-label" for="packingService">Packing Service (+$200)</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input add-on" type="checkbox" value="150" id="furnitureService">
+              <label class="form-check-label" for="furnitureService">Furniture Disassembly (+$150)</label>
+          </div>
+          <div class="form-check">
+              <input class="form-check-input add-on" type="checkbox" value="300" id="storageService">
+              <label class="form-check-label" for="storageService">Storage for 1 Month (+$300)</label>
+          </div>
+      </div>
+
+    <!-- Quote Summary -->
+    <div class="mt-4 p-4 border rounded bg-light">
+        <h4>Quote Summary</h4>
+        <p><strong>Base Price:</strong> $<span id="basePrice">500</span></p>
+        <p><strong>Add-Ons:</strong> $<span id="addOns">0</span></p>
+        <p><strong>Tax (8%):</strong> $<span id="tax">0.00</span></p>
+        <h3><strong>Total Estimate:</strong> $<span id="total">500</span></h3>
+        <button class="btn btn-primary w-100 mt-3" id="quoteBtn">Get a Quote</button>
+    </div>
+
+    <div class="container px-4 py-5">
+      <img src="images/family-moving.jpg" class="d-block w-100" alt="Family in kitchen with packed boxes">
+    </div>
+
+    <!-- Contact Form -->
+    <div class="container px-5" id="contact">
+      <h2 class="pb-2 border-bottom">Ready to Get Started?</h2>
+      <form action="">
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+          <div class="mb-3">
+            <label for="fullName" class="form-label">Full Name<span>*</span></label>
+            <input type="text" class="form-control" id="fullName" placeholder="Jane Doe" required>
+          </div>
+          <div class="mb-3">
+            <label for="phoneNum" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="phoneNum" placeholder="555-555-5555">
+          </div>
+          <div class="mb-3">
+            <label for="emailAddress" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="emailAddress" placeholder="name@example.com">
+          </div>
+          <fieldset>
+            <p>Would you like to be contacted by phone or email?<span>*</span></p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="contactPref" id="tel">
+              <label class="form-check-label" for="tel">
+                Telephone
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="contactPref" id="email" checked>
+              <label class="form-check-label" for="email">
+                Email
+              </label>
+            </div>
+          </fieldset>
+          <div class="mb-3">
+            <label for="details" class="form-label">Tell us about your move: <span>*</span></label>
+            <textarea class="form-control" id="details" rows="3" required></textarea>
+          </div>
+                     
+        </div>
+        <div class="row">
+          <div class="col-12 d-grid">
+              <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>   
+      </form>
+      <div id="successMessage"></div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container">
+      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+        <div class="col mb-3">
+          <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"><img src="images/box-seam.svg" alt="box-seam" height="50px"></a>
+          <p class="text-body-secondary">© 2025 | Move with Move It</p>
+        </div>
+    
+        <div class="col mb-3">
+    
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
